@@ -1,5 +1,5 @@
 import express  from "express";
-import { errorMiddleware } from "./app/middleware/ErrorMiddleware";
+import { errorMiddleware } from "./middleware/ErrorMiddleware";
 import { router } from "./router"
 
 export class App {

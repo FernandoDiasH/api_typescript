@@ -10,7 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Teste {
+model User {
   id Int @id @default(autoincrement())
   nome String @db.VarChar(255)
+  email String @db.VarChar(255)
+  password String @db.VarChar(255)
+  dtaNascimento String @db.VarChar(255) 
 }
