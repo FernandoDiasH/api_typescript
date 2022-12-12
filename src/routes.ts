@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { User } from "./entities/User";
+import { DebitEntry } from "./entities/DebitEntry";
+import { createDebitEntryControlle } from "./useCases/debitEntry/createDebitEntry";
 import { createUserController } from "./useCases/user/createUser";
 import { deleteUserController } from "./useCases/user/deleteUser";
 import { findUsersController } from "./useCases/user/findUsers";
@@ -19,6 +20,14 @@ routes.delete('/user', (req, res)=>{
 })
  routes.get('/users', (req, res)=>{
      return findUsersController.handle(req, res)
- })
+})
+
+routes.post('/debit', (req, res) =>{
+   return createDebitEntryControlle.handle(req, res)
+})
+
+routes.get('/teste', (req, res)=>{
+    throw new Error('um erro aconteceu')
+})
 
 export {routes}

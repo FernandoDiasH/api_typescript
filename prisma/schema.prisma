@@ -15,5 +15,12 @@ model User {
   name String @db.VarChar(255)
   email String @unique
   password String @db.LongText
+}
 
+model DebityEntrie{
+  id Int @id @default(autoincrement())
+  description String @db.VarChar(255)
+  category String @db.VarChar(255)
+  value Float @db.Float
+  dtPurchase String @db.VarChar(255)
 }

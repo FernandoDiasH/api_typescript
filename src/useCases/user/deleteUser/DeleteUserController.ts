@@ -15,10 +15,10 @@ export class DeleteUserController
 
         try{
             await this.deleteUserUseCase.execute(id)
-            return res.status(201).send("Deletado com sucesso")
+            return res.sendStatus(201).send("Deletado com sucesso")
         } catch (err){
             console.log(err)
-            return res.status(500).json({
+            return res.sendStatus(500).json({
                 msg: err.message || 'Unesxpected error'
             })
         }   

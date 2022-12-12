@@ -13,11 +13,11 @@ export class FindUsersController
     async handle (req:Request, res:Response){
         try {
             const users = await this.findUsersUsecase.execute()
-            return res.status(200).json(users)
+            return res.sendStatus(200).json(users)
 
         } catch (error) {
 
-            return res.status(500).json({
+            return res.sendStatus(500).json({
                 message:error.message || 'unxpectade error'
             })
         }

@@ -1,10 +1,8 @@
 import { MailtrapMailProvider } from "../../../providers/implementation/MailtrapMailProvider";
-import { PostgressUserRepository } from "../../../repositories/PostgressUserRepository";
 import { PrismaUserRepository } from "../../../repositories/prisma/PrismaUserRepository";
 import { CreateUserController } from "./CreateUserController";
 import { CreateUserUseCase } from "./CreateUserUseCase";
 
-const postgressUserRepository = new PostgressUserRepository() 
 const prismaUserRepository = new PrismaUserRepository()
 const mailtrapMailProvider = new MailtrapMailProvider()
 
