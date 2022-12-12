@@ -1,0 +1,36 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoDiasH/api_typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandoDiasH/api_typescript/issues"
+  },
+  "homepage": "https://github.com/FernandoDiasH/api_typescript#readme",
+  "dependencies": {
+    "@prisma/client": "^4.7.1",
+    "@types/express": "^4.17.14",
+    "@types/nodemailer": "^6.4.6",
+    "express": "^4.18.2",
+    "nodemailer": "^6.8.0",
+    "ts-node-dev": "^2.0.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.13",
+    "prisma": "^4.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
