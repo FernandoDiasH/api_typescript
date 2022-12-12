@@ -1,27 +1,10 @@
-import express  from "express";
-import { errorMiddleware } from "./app/middleware/ErrorMiddleware";
-import { router } from "./router"
+import express from 'express'
+import { routes } from './routes'
 
-export class App {
-    public server: express.Application;
+const app = express()
 
-    constructor() {
-        this.server = express();
-        this.initializeMiddleware();
-        this.router();
-        this.initializeErrorHandling();
-    }
+app.use(express.json())
+app.use(routes)
 
-    private initializeMiddleware() : void{
-        this.server.use(express.json());
-        
-    }
+export{app}
 
-    private initializeErrorHandling (){
-        this.server.use(errorMiddleware.error)
-    }
-
-    private router(){
-        this.server.use(router);
-    }
-}
