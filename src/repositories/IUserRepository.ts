@@ -5,4 +5,5 @@ export interface IUserRepositorie {
     findByID(id:string):Promise<User>
     save(user:User):Promise<void>
     delete(id:string):Promise<void>
+    findAll():Promise<User[]>
 }

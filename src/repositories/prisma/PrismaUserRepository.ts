@@ -1,11 +1,16 @@
 
-import { User } from "../../../entities/User";
-import { prisma } from "../../../prisma";
-import { IUserRepositorie } from "../../IUserRepository";
+import { User } from "../../entities/User";
+import { prisma } from "../../prisma";
+import { IUserRepositorie } from "../IUserRepository";
 
 
 export class PrismaUserRepository implements IUserRepositorie
 {
+    async findAll(): Promise<User[]> {
+        const users = prisma.user.findMany()
+        return users
+    }
+
     async delete(id: string): Promise<void> {
         console.log(id)
        await prisma.user.delete({
